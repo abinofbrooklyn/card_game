@@ -11,7 +11,7 @@ class Deck
       (2..10).each do |number|
         cards << Card.new(suit, number)
       end
-      ["J", "Q", "K", "A"].each do |facecard|
+      [:J, :Q, :K, :A].each do |facecard|
         cards << Card.new(suit, facecard)
       end
     end

@@ -1,5 +1,5 @@
 class Card
-  attr_reader :suit, :value
+  attr_reader :suit
 
   def initialize(suit, value)
     @suit = suit
@@ -7,8 +7,8 @@ class Card
   end
 
   def value
-    return 10 if ["J", "Q", "K"].include?(@value)
-    return 11 if @value == "A"
+    return 10 if [:J, :Q, :K].include?(@value)
+    return 11 if @value == :A
     return @value
   end
 
