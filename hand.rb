@@ -14,6 +14,10 @@ class Hand
   end
 
   def serialize
-    { cards: cards, value: value }
+    { cards: readable(cards), value: value }
+  end
+
+  def readable(cards)
+    cards.map(&:to_s)
   end
 end
